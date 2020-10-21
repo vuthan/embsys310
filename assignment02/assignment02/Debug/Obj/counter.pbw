@@ -1,0 +1,58 @@
+[
+  {
+    "ID": "c:main.c@10@macro@_POINTER_",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_POINTER_",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\UW_Workspace\\embsys310\\assignment02\\main.c"
+    },
+    "name": "_POINTER_",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@counter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "counter",
+    "location": {
+      "column": "9",
+      "line": "6",
+      "path": "C:\\UW_Workspace\\embsys310\\assignment02\\main.c"
+    },
+    "name": "counter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int main(void)",
+    "location": {
+      "column": "5",
+      "line": "9",
+      "path": "C:\\UW_Workspace\\embsys310\\assignment02\\main.c"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@142@F@main@p_int",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "p_int",
+    "location": {
+      "column": "10",
+      "line": "13",
+      "path": "C:\\UW_Workspace\\embsys310\\assignment02\\main.c"
+    },
+    "name": "p_int",
+    "origin": "project_file",
+    "scope": null
+  }
+]
