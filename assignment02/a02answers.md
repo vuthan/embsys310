@@ -36,9 +36,9 @@
    * a) What is the value of “counter” at the end of the program? **counter = 4**
    * b) Explain why the counter value has changed? 
         'counter' value changed because variable "counter" is stored at memory address 0x20000000.  p_int pointer 
-        assigns to an address 0x2000000, which is same memory address of variable "counter".  when ++(*p_int) execute,
-        this instruction will change the value in memory address p_int points to, which is same as counter variable's
-        memory address. That is why we see "counter" variable value changed.
+        is assigned to an address 0x2000000, which is same memory address of variable "counter".  when ++(*p_int) execute,
+        this instruction will change the value in memory address pointer p_int points to, which is same as counter variable's
+        memory address. That is why we see "counter" variable's value changed.
         
 * 7. Change the setting of IAR to run the same program on the **evaluation board**:
    * a) What is the address where “counter” is stored? **0x20000000**
