@@ -1,13 +1,18 @@
-* 1. Follow the same steps as we did in the class to blink LED1 (PA5) at a visible rate using the bitband 
+  1. Follow the same steps as we did in the class to blink LED1 (PA5) at a visible rate using the bitband 
      region to enable the clock to Port A, then answer the following:
-* a. What instructions does the compiler produce in assembly for “writing” to the GPIO bit
-     when using bit-band address? **STR   R2, [R1]**
+* a. What instructions does the compiler produce in assembly for “writing” to the GPIO bit when using bit-band
+     address?
+     
+     **STR  R2, [R1]**
 * b. What were the instructions produced when writing to the GPIOx_ODR without using bitbanding?
+     
      **LDR   R5, [R4]**
+     
      **ORRS  R5, R5, R3**
+     
      **STR   R5, [R4]**
 
-* 2. Create a function “func1” with multiple arguments (5 arguments for example) and call “func1”
+  2. Create a function “func1” with multiple arguments (5 arguments for example) and call “func1”
      from within another function “func2”. Trace thru the assembler and note:
 * a. How does the calling function “func2” pass the values to the called function “func1”?
      func2 moves 5th value to **R0** then store 5th value in R0 on stack.  then 1st to 4th values will be 
@@ -34,6 +39,7 @@
     
     int BigOrLittleEndian(void)
     {
+    
         unsigned int iNumber = 0x22334455;
         char* pChar = (char*)(&iNumber);
         
