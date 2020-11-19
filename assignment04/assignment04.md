@@ -12,11 +12,11 @@
      
      **STR   R5, [R4]**
 
-  2. Create a function “func1” with multiple arguments (5 arguments for example) and call “func1”
+ 2. Create a function “func1” with multiple arguments (5 arguments for example) and call “func1”
      from within another function “func2”. Trace thru the assembler and note:
 * a. How does the calling function “func2” pass the values to the called function “func1”?
-     func2 moves 5th value to **R0** then store 5th value in R0 on stack.  then 1st to 4th values will be 
-     stored in **R0-R3** that is how func2 passes these 5 values to func1.  **R0** is used as scratch register
+     func2 moves 5th value to **R0** then store 5th value in **R0** on stack. 1st to 4th values will be 
+     stored in **R0-R3**. That is how func2 passes these 5 values to func1.  **R0** is used as scratch register
      to store 5th, 6th, 7th ... values on the stack
 * b. What extra code did the compiler generate before calling the function “func1” with the
      multiple arguments?
@@ -29,13 +29,14 @@
 * d. Any other observations? For **LDR**(s) instructions, compiler has to calculate correct offset and add 
      to current *SP* to get to where the passed in values to func1 are stored on stack, because the stack grow to lower address.
 
-* 4. Bonus: Using the power of pointers and type casting, create a function that can determine if a
+4. Bonus: Using the power of pointers and type casting, create a function that can determine if a
      computer is big-endian or little-endian. Test your function in the simulator and modify the
      Project Options (as shown in the figure below) against:
-     a. Cortex M4 (Little endian option)
-     b. Cortex M4 (Big Endian option)
+     
+     * a. Cortex M4 (Little endian option)
+     * b. Cortex M4 (Big Endian option)
 
-    function to determine Little or Big Endian: 
+    Function to determine Little or Big Endian: 
     
     int BigOrLittleEndian(void)
     {
