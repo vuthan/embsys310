@@ -20,8 +20,8 @@
 //  Function Name   : divBy2Asm
 //  Description     : Calls C code to print a string; 
 //                    computes divide by 2 of its input argument
-//  C Prototype     : int divBy2Asm(iNum)
-//                  : Where iNum is theinput value to divide by 2
+//  C Prototype     : int divBy2Asm(int iNum)
+//                  : Where iNum is the input value to divide by 2
 //  Parameters      : R0: integer iNum
 //  Return value    : R0
 //
