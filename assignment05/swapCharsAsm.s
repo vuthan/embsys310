@@ -19,7 +19,7 @@
 //
 //  Function Name   : swapCharsAsm
 //  Description     : Calls C code to swap character of 2 inputs
-//  C Prototype     : int swapCharsAsm(char* p_cChar1, p_cChar2)
+//  C Prototype     : int swapCharsAsm(char* p_cChar1, char* p_cChar2)
 //                  : Where p_cChar1, p_cChar2 are the input holding the memory 
 //                    address of 2 characters to be swapped
 //  Parameters      : R0 - address of p_cChar1
