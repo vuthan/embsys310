@@ -19,7 +19,7 @@
 //
 //  Function Name   : swapPointersAsm
 //  Description     : Calls C code to swap 2 pointers
-//  C Prototype     : int swapPointersAsm(int** p_piNum1, p_piNum2)
+//  C Prototype     : int swapPointersAsm(int** p_piNum1, int** p_piNum2)
 //                  : Where p_piNum1, p_piNum2 are the inputs holding the memory 
 //                    address of 2 integer pointers to be swapped
 //  Parameters      : R0 - address of p_piNum1
