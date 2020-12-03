@@ -5,7 +5,7 @@
 void __iar_program_start(void);
 void NotUsedHandler(void);
 
-
+// Interrupt Vector Table
 int const __vector_table[] @ ".intvec" = {
     (int) __section_end("CSTACK"),      // initial sp value
     (int) __iar_program_start,          // Reset Handler
@@ -18,11 +18,11 @@ int const __vector_table[] @ ".intvec" = {
     0,          // Reserved
     0,          // Reserved
     0,          // Reserved
-    (int)&SVC_Handler,                   // SVCall Handler
-    (int)&DebugMon_Handler,              // Debug Monitor Handler
+    (int)SVC_Handler,                   // SVCall Handler
+    (int)DebugMon_Handler,              // Debug Monitor Handler
     0,          // Reserved
-    (int)&PendSV_Handler,                // Pending SV Handler
-    (int)&SysTick_Handler                // SysTick Interrupt Handler
+    (int)PendSV_Handler,                // Pending SV Handler
+    (int)SysTick_Handler                // SysTick Interrupt Handler
 };
 
 void NotUsedHandler(void)
