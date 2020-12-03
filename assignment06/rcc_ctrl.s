@@ -55,7 +55,6 @@ BB_PERIPHERAL_BASE  EQU  0x42000000
 BB_RCC_OFFSET       EQU  0x2104C
 
 enable_rcc
-    // <TODO> Implement function in assembly
     MOV  R2, #4
     MUL  R1, R0, R2                     // input port * 4
     LDR  R2, =BB_PERIPHERAL_BASE        // load bb alias of peripheral base 
