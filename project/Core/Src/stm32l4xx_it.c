@@ -203,11 +203,6 @@ void SysTick_Handler(void)
 
 extern uint32_t g_uiState;
 
-// can use bit-banding for g_InterruptNeedService
-// becase bit-banding is atomic instruction.
-// using g_InterruptNeedService this way may have a shared data problem
-extern uint32_t g_InterruptNeedService;
-
 void EXTI15_10_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
@@ -216,9 +211,6 @@ void EXTI15_10_IRQHandler(void)
       g_uiState = 0;
     else
       g_uiState = g_uiState + 1;
-    
-    if (!g_InterruptNeedService)
-        g_InterruptNeedService = 1;
     
   /* USER CODE END EXTI15_10_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13); 
