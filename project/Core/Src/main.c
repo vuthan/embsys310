@@ -106,7 +106,8 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim);
   uint32_t uiAFFastModeInit = 0;
   int16_t iStep = 0;
   uint16_t uiPWMValue = 0;
-
+  uint16_t uiPWMFastValue = 0;
+  int16_t iFastStep = 0;
   
   while (1)
   {
@@ -186,7 +187,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim);
 
             if (uiAFFastModeInit)
             { 
-                // fast mode
+                // slow mode
                 htim2.Init.Period = 2000;
                 if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
                 {
@@ -222,12 +223,12 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim);
             HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
             
             HAL_Delay(10); 
-            if(uiPWMValue == 0) 
-              iStep = 10;
-            if(uiPWMValue == 200) 
-              iStep = -10;
-            uiPWMValue += iStep;
-            vSetPWMValue(uiPWMValue);
+            if(uiPWMFastValue == 0) 
+              iFastStep = 10;
+            if(uiPWMFastValue == 200) 
+              iFastStep = -10;
+            uiPWMFastValue += iFastStep;
+            vSetPWMValue(uiPWMFastValue);
             
             break;
             default:
