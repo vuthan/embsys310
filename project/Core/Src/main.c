@@ -24,7 +24,6 @@
 /* USER CODE BEGIN Includes */
 
 uint32_t g_uiState = 0;
-uint32_t g_InterruptNeedService = 0;
 
 /* USER CODE END Includes */
 
